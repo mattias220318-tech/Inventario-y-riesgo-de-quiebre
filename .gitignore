@@ -1,0 +1,19 @@
+# Entorno
+.env
+.DS_Store
+
+# Backend (Spring Boot)
+backend/target/
+backend/*.jar
+backend/.mvn/
+!backend/.mvn/wrapper/maven-wrapper.jar
+
+# Frontend (React)
+frontend/node_modules/
+frontend/build/
+frontend/npm-debug.log
+
+# IDEs
+.idea/
+.vscode/
+*.swp
