@@ -1,0 +1,25 @@
+{
+  "name": "Entorno Inventario (Monolito React+Spring)",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "21"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "dbaeumer.vscode-eslint",
+        "ms-azuretools.vscode-docker",
+        "redhat.java"
+      ]
+    }
+  },
+  "forwardPorts": [5432, 8080],
+  "remoteUser": "root"
+}
