@@ -1,6 +1,6 @@
 {
-  "name": "Entorno Inventario (Monolito React+Spring)",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "name": "Entorno Inventario",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {},
     "ghcr.io/devcontainers/features/java:1": {
@@ -19,6 +19,10 @@
         "redhat.java"
       ]
     }
+  },
+  "forwardPorts": [5432, 8080],
+  "remoteUser": "root"
+}
   },
   "forwardPorts": [5432, 8080],
   "remoteUser": "root"
