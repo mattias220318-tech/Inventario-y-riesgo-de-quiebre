@@ -1,34 +1,21 @@
-version: '3.8'
-
 services:
-  db-postgres:
+  db:
     image: postgres:15-alpine
-    container_name: inventario-db
-    env_file: .env
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: inventario
     ports:
       - "5432:5432"
-    volumes:
-      - pgdata:/var/lib/postgresql/data
-    restart: unless-stopped
 
-  backend-inventario:
-    build:
-      context: ./backend
-    container_name: inventario-backend
+  backend:
+    build: ./backend
     ports:
       - "8080:8080"
-    env_file: .env
     depends_on:
-      - db-postgres
+      - db
 
-  frontend-inventario:
-    build:
-      context: ./frontend
-    container_name: inventario-frontend
+  frontend:
+    build: ./frontend
     ports:
-      - "3000:3000"
-    depends_on:
-      - backend-inventario
-
-volumes:
-  pgdata:
+      - "5173:5173"
