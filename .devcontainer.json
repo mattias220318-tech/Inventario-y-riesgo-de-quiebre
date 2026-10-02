@@ -23,7 +23,3 @@
   "forwardPorts": [5432, 8080],
   "remoteUser": "root"
 }
-  },
-  "forwardPorts": [5432, 8080],
-  "remoteUser": "root"
-}
